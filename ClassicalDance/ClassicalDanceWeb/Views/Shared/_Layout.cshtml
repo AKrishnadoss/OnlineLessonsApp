@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Dance School</title>
+    <base href="/" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-custom border-bottom box-shadow mb-3">
+        <div class="container">
+            <img src="~/images/nataraj.jpg" width="25px" height="25px"/>
+            <h4 style="text-align:left">GuruKrupa School of Dance</h4>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>-->
+        @*<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                    </li>
+                </ul>
+            </div>*@
+        <!--</div>
+        </nav>-->
+        <nav class="navbar navbar-expand-md navbar-custom">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <img src="~/images/nataraj.jpg" width="40px" height="40px" />
+            </div>
+            <div class="mx-auto order-0">
+                <div class="navbar-brand mx-auto" style="color:white">GuruKrupa School of Dance</div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="btn btn-sm btn-outline-dark btn-light" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Dance School - <a asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="~/ClientApp/dist/main-es5.js"></script>
+    <script src="~/ClientApp/dist/main-es2015.js"></script>
+    <script src="~/ClientApp/dist/polyfills-es5.js"></script>
+    <script src="~/ClientApp/dist/polyfills-es2015.js"></script>
+    <script src="~/ClientApp/dist/runtime-es5.js"></script>
+    <script src="~/ClientApp/dist/runtime-es2015.js"></script>
+    <script src="~/ClientApp/dist/vendor-es5.js"></script>
+    <script src="~/ClientApp/dist/vendor-es2015.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
