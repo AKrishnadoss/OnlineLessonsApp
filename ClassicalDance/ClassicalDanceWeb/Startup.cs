@@ -10,7 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
-
+using AutoMapper;
+using ClassicalDanceWeb.Data;
+using Microsoft.EntityFrameworkCore;
+using ClassicalDanceWeb.Models;
 
 namespace ClassicalDanceWeb
 {
@@ -34,8 +37,19 @@ namespace ClassicalDanceWeb
                 configuration.RootPath = "ClientApp/dist";
             });
 
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
             services.AddMemoryCache();
+
+            string connectionString = @"Server=NIRANJANAKILA\SQLEXPRESS;Initial Catalog=DanceDb;User id=sa;password=admin123;";
+            services.AddDbContext<DanceDBContext>(config =>
+            {
+                config.UseSqlServer(connectionString);
+            });
+
+            services.AddTransient<IDanceRepository, DanceRepository>();
+            services.AddTransient<IStudentModel, StudentModel>();
+
             services.AddMvc(config =>
             {
                 if (_environment.IsDevelopment())

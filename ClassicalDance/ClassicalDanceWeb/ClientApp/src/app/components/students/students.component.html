@@ -1,2 +1,15 @@
 <p>Hello students , Below is a list of perfomances of great dancers that you can watch and get inspired</p>
 
+<div>
+  <!--<div *ngIf="loadingMessage">
+    {{loadingMessage}}
+  </div>-->
+  <!--<div *ngIf="! loadingMessage">-->
+    <div *ngFor="let s of students">
+      {{s.id}} , {{s.firstName}},{{s.lastName}}
+    </div>
+  <!--</div>-->
+  <!--<div *ngIf="errorMessage">
+    {{errorMessage}}
+  </div>-->
+</div>

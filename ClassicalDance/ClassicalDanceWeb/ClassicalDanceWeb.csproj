@@ -23,6 +23,8 @@
     <None Remove="ClientApp\src\app\components\history\history.component.ts" />
     <None Remove="ClientApp\src\app\components\parents\parents.component.ts" />
     <None Remove="ClientApp\src\app\components\students\students.component.ts" />
+    <None Remove="ClientApp\src\models\student.ts" />
+    <None Remove="ClientApp\src\services\StudentService.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,7 +36,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.8" />
   </ItemGroup>
 
@@ -52,6 +58,8 @@
     <TypeScriptCompile Include="ClientApp\src\app\components\students\students.component.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\models\student.ts" />
+    <TypeScriptCompile Include="ClientApp\src\services\StudentService.ts" />
   </ItemGroup>
 
 </Project>
